@@ -22,8 +22,29 @@ http://opensource.org/licenses/mit-license.php
 
 その後中のRoutingLibraryの中のファイルとフォルダを全部プロジェクトのトップディレクトリに配置してください。
 
+そしてトップディレクトリにhtaccess.txtを置いて、名前と拡張子を.htaccessに変えるか、.htaccessを作り以下のコードを貼り付けてください。
+```htaccess
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ router/router.php [QSA,L]
+</IfModule>
+IndexIgnore ./router/*
+```
+
 あとはルートを定義して終わりです。
 
+ファイル構成は
+
+[ProjectForlder]
+    [...]
+    router/
+      conf.php
+      const.php
+      router.php
+    .htaccess
+    [...]
+です。
 ルーティングの定義や設定は以下のリファレンスで解説しています。
 
 # リファレンス

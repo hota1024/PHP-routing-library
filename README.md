@@ -36,16 +36,8 @@ IndexIgnore ./router/*
 あとはルートを定義して終わりです。
 
 ファイル構成は
-
-[ProjectForlder]
-    [...]
-    router/
-      conf.php
-      const.php
-      router.php
-    .htaccess
-    [...]
-です。
+<img width="510" alt="2017-10-30 19 10 30" src="https://user-images.githubusercontent.com/24543982/32165524-6b1f7526-bda6-11e7-9b4c-b28e34171a4e.png">
+こんな感じです。
 ルーティングの定義や設定は以下のリファレンスで解説しています。
 
 # リファレンス
